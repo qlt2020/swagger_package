@@ -70,9 +70,6 @@ class AuthController extends Controller
 ```
 3. Привязываем контроллер к роуту. Пример: 
 ```php
-    
-    use Hmurich\Swagger\Controllers\SwaggerViewController;
-
     Route::post('login', [AuthController::class, 'login']);
 ```
 4. запускаем команду в консоле для генерации конфигурации 
@@ -81,6 +78,9 @@ php artisan swagger:generate
 ```
 5. указываем роут для вывода swagger-ui (разово)
 ```php
+    
+use Hmurich\Swagger\Controllers\SwaggerViewController;
+
 Route::get('swagger/ui', [SwaggerViewController::class, 'index']);
 ```
 6. указываем именования полей, через трайнслайтор.
