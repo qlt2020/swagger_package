@@ -95,7 +95,7 @@ class OpenApiGenerator
             $operation = Operation::post($name);
         else if ($route->type == 'PUT')
             $operation = Operation::put($name);
-        else if ($route['type'] == 'DELETE')
+        else if ($route->type == 'DELETE')
             $operation = Operation::delete($name);
         else
             $operation = Operation::get($name);
