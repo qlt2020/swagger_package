@@ -19,7 +19,7 @@
         "classmap": [
             "src/controllers"
         ],
-        "psr-0": {
+        "psr-4": {
             "Hmurich\\Swagger\\": "src/"
         }
     },
