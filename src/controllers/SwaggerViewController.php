@@ -1,5 +1,5 @@
 <?php
-namespace Hmurich\Swagger\controllers;
+namespace Hmurich\Swagger\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
