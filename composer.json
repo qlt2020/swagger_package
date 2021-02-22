@@ -1,0 +1,33 @@
+{
+    "name": "hmurich/swagger",
+    "description": "generate swagger",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Murat Berzhikeev",
+            "email": "hmurich@mail.ru"
+        }
+    ],
+    "require": {
+        "php": ">=7.3.0",
+        "illuminate/support": "^7.0|^8.0",
+        "goldspecdigital/oooas": "dev-master"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "classmap": [
+            "src/controllers"
+        ],
+        "psr-0": {
+            "Hmurich\\Swagger\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hmurich\\Swagger\\HmurichSwaggerServiceProvider"
+            ]
+        }
+    }
+}
