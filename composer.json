@@ -26,7 +26,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "git@github.com:qlt2020/swagger_package.git"
+            "url": "git@github.com:qlt2020/oooas.git"
         }
     ],
     "extra": {
