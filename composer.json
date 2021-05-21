@@ -12,7 +12,7 @@
     "require": {
         "php": ">=7.3.0",
         "illuminate/support": "^7.0|^8.0",
-        "hmurich/oooas": "^2.9"
+        "goldspecdigital/oooas": "dev-master": "2.9"
     },
     "minimum-stability": "dev",
     "autoload": {
