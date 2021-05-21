@@ -144,7 +144,7 @@ class OpenApiGenerator
 
         // generate path
         $path = PathItem::create($name)
-                        ->route($route->url)
+                        ->route($route->url.'?'.$route->type)
                         ->operations($operation);
 
         $path = $path->summary($name);
