@@ -101,7 +101,7 @@ class OpenApiGenerator
             $operation = Operation::get($name);
 
         $url_param = [];
-        $url_param = Parameter::create()->name('Accept')->in('header')->required(true)->example('application/json');
+        $url_param[] = Parameter::create()->name('Accept')->in('header')->required(true)->example('application/json');
         if (is_array($route->route_params)) {
             foreach ($route->route_params as $param) {
                 $url_param[] = $this->routeParam($param, $tag, $route);
