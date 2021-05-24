@@ -51,6 +51,12 @@ class SwaggerRouteParser {
 
         foreach ($method->getParameters () as $param){
             $class = $param->getType();
+            
+            if ($class && in_array($class->getName(), ['int', 'string', 'bool'])){
+                $this->parseRouteOtherParam($param);
+                continue;
+            }
+            
             if ($class) {
                 $class = $class->getName();
                 $class = new ReflectionClass($class);
