@@ -52,7 +52,7 @@ class SwaggerRouteParser {
         foreach ($method->getParameters () as $param){
             $class = $param->getType();
             
-            if ($class && in_array($class->getName(), ['int', 'string', 'bool'])){
+            if ($class && in_array($class->getName(), ['int'])){
                 $this->parseRouteOtherParam($param);
                 continue;
             }
