@@ -123,7 +123,7 @@ class OpenApiGenerator
                 if (count($ar_req))
                    $sheme =  call_user_func_array(array($sheme, "required"), $ar_req);
 
-                $form_data = RequestBody::create()->content(MediaType::create()->mediaType('application/x-www-form-urlencoded')->schema($sheme));
+                $form_data = RequestBody::create()->content(MediaType::create()->mediaType(($route->type == 'PUT' ? 'application/x-www-form-urlencoded' : 'multipart/form-data'))->schema($sheme));
 
                 $operation = $operation->requestBody($form_data);
             }
