@@ -209,6 +209,8 @@ class OpenApiGenerator
             $param = Schema::string($data->name)->format(Schema::FORMAT_BINARY);
         else if ($data->type == 'boolean')
             $param = Schema::boolean($data->name);
+        else if ($data->type == 'array')
+            $param = Schema::array($data->name);
         else
             $param = Schema::string($data->name);
 
