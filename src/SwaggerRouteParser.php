@@ -88,6 +88,8 @@ class SwaggerRouteParser {
         foreach ($rules as $rule_name => $rule){
             $is_array = false;
             if (strpos($rule_name, '.*') !== false){
+                continue;
+                // TODO реализовать логику сверки массива
                 $rule_name = str_replace(".*", "", $$rule_name);
                 $is_array = true;
             }
